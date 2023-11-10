@@ -1,5 +1,12 @@
+#include <stdio.h>
+#include "node.h"
+
+
+int main() {
+
+    Node node; 
 // Étape 1 : Lire le graphe à partir du fichier binaire
-LoadGraphFromBinaryFile("graph.bin", &Graph);
+readingmap2readbin("andorra.csv.bin", &Node);
 
 // Étape 2 : Mettre en place l'algorithme A*
 AStarPath PathData[GraphOrder];
@@ -14,4 +21,6 @@ if (result) {
     PrintOptimalPath(Graph, PathData, node_start, node_goal);
 } else {
     printf("Pas de chemin trouvé.\n");
+}
+
 }
